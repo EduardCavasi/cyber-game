@@ -13,6 +13,15 @@ const InventoryContainer = styled.div`
   height: auto;
   max-height: 400px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+  @media (max-width: 768px) {
+    max-height: 300px;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.6rem;
+    max-height: 250px;
+  }
 `;
 
 const InventoryTitle = styled.h2`
@@ -22,6 +31,11 @@ const InventoryTitle = styled.h2`
   padding-bottom: 0.4rem;
   font-size: 1.2rem;
   text-align: center;
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    padding-bottom: 0.3rem;
+  }
 `;
 
 const ItemsContainer = styled.div`
@@ -32,6 +46,17 @@ const ItemsContainer = styled.div`
   flex-grow: 1;
   max-height: 320px;
   padding-right: 5px;
+  
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+    max-height: 240px;
+  }
+  
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    max-height: 200px;
+  }
   
   /* Scrollbar styling */
   &::-webkit-scrollbar {
@@ -79,6 +104,10 @@ const ItemName = styled.div`
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  
+  @media (max-width: 480px) {
+    font-size: 0.75rem;
+  }
 `;
 
 const ClueIndicator = styled.span`

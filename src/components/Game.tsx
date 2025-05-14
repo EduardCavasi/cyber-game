@@ -20,6 +20,10 @@ const GameContainer = styled.div`
   min-height: 100vh;
   background-color: #1a1a1a;
   font-family: 'Roboto', sans-serif;
+  
+  @media (max-width: 480px) {
+    padding: 0.5rem;
+  }
 `;
 
 const Header = styled.header`
@@ -28,11 +32,21 @@ const Header = styled.header`
   align-items: center;
   margin-bottom: 1rem;
   position: relative;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
 `;
 
 const Title = styled.h1`
   color: #3498db;
   margin: 0;
+  
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const MainContent = styled.div`
@@ -50,6 +64,10 @@ const SidePanel = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+  }
 `;
 
 const LanguageSelector = styled.div`
@@ -101,12 +119,27 @@ const WelcomeScreen = styled.div`
   height: 80vh;
   color: white;
   padding: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+    height: auto;
+  }
 `;
 
 const WelcomeTitle = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #3498db;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const StartButton = styled.button`
@@ -144,6 +177,16 @@ const SceneDescriptionBox = styled.div`
   line-height: 1.6;
   border-left: 4px solid #3498db;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
 `;
 
 const SolutionButton = styled.button`

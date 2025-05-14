@@ -10,6 +10,14 @@ const CluesPanelContainer = styled.div`
   padding: 1rem;
   margin-top: 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+  @media (max-width: 768px) {
+    padding: 0.8rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.6rem;
+  }
 `;
 
 const CluesPanelTitle = styled.h2`
@@ -19,16 +27,30 @@ const CluesPanelTitle = styled.h2`
   padding-bottom: 0.5rem;
   text-align: center;
   font-size: 1.2rem;
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    padding-bottom: 0.3rem;
+  }
 `;
 
 const CluesList = styled.ul`
   padding-left: 1.5rem;
   margin-bottom: 0;
+  
+  @media (max-width: 480px) {
+    padding-left: 1.2rem;
+  }
 `;
 
 const ClueItem = styled.li`
   color: #ecf0f1;
   margin-bottom: 0.5rem;
+  
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
   
   &:last-child {
     margin-bottom: 0;

@@ -33,6 +33,16 @@ const ContentContainer = styled.div`
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   animation: scaleIn 0.5s ease-out;
   
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  @media (max-width: 480px) {
+    width: 95%;
+    padding: 1rem;
+  }
+  
   @keyframes scaleIn {
     from { transform: scale(0.9); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
@@ -42,11 +52,19 @@ const ContentContainer = styled.div`
 const Title = styled.h1`
   color: #27ae60;
   margin-top: 0;
+  
+  @media (max-width: 480px) {
+    font-size: 1.6rem;
+  }
 `;
 
 const SubTitle = styled.h2`
   color: #3498db;
   margin-top: 0.5rem;
+  
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const Message = styled.p`
@@ -54,6 +72,12 @@ const Message = styled.p`
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 1.5rem 0;
+  
+  @media (max-width: 480px) {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 1rem 0;
+  }
 `;
 
 const CyberSecurityLessons = styled.div`
@@ -62,16 +86,30 @@ const CyberSecurityLessons = styled.div`
   padding: 1.5rem;
   margin: 1.5rem 0;
   text-align: left;
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
 `;
 
 const LessonTitle = styled.h3`
   color: #f39c12;
   margin-top: 0;
+  
+  @media (max-width: 480px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const LessonList = styled.ul`
   padding-left: 1.5rem;
   color: #ecf0f1;
+  
+  @media (max-width: 480px) {
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+  }
 `;
 
 const Button = styled.button`
@@ -88,6 +126,11 @@ const Button = styled.button`
   
   &:hover {
     background-color: #2980b9;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
   }
 `;
 

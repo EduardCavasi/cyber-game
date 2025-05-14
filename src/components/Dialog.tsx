@@ -31,6 +31,11 @@ const DialogContainer = styled.div`
   flex-direction: column;
   animation: slideIn 0.3s ease-out;
   
+  @media (max-width: 480px) {
+    width: 95%;
+    max-height: 85vh;
+  }
+  
   @keyframes slideIn {
     from {
       transform: translateY(20px);
@@ -50,11 +55,19 @@ const DialogHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  @media (max-width: 480px) {
+    padding: 0.8rem;
+  }
 `;
 
 const DialogTitle = styled.h3`
   margin: 0;
   font-size: 1.2rem;
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const CloseButton = styled.button`
@@ -75,6 +88,10 @@ const CloseButton = styled.button`
 const DialogContent = styled.div<{ isEmpty?: boolean }>`
   padding: ${props => props.isEmpty ? '0.5rem 1.5rem' : '1.5rem'};
   ${props => props.isEmpty && 'min-height: 0;'}
+  
+  @media (max-width: 480px) {
+    padding: ${props => props.isEmpty ? '0.5rem 1rem' : '1rem'};
+  }
 `;
 
 const DialogActions = styled.div<{ centered?: boolean }>`
@@ -83,6 +100,12 @@ const DialogActions = styled.div<{ centered?: boolean }>`
   justify-content: ${props => props.centered ? 'center' : 'flex-end'};
   gap: 0.5rem;
   border-top: 1px solid #34495e;
+  
+  @media (max-width: 480px) {
+    padding: 0.8rem;
+    flex-direction: ${props => props.centered ? 'row' : 'column'};
+    gap: 0.5rem;
+  }
 `;
 
 const Button = styled.button<{ primary?: boolean; examine?: boolean; disabled?: boolean }>`
@@ -107,6 +130,12 @@ const Button = styled.button<{ primary?: boolean; examine?: boolean; disabled?: 
       if (props.examine) return '#c0392b';
       return props.primary ? '#3498db' : '#3d5a80';
     }};
+  }
+  
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: ${props => props.examine ? '0.6rem 1.2rem' : '0.5rem 1rem'};
+    font-size: ${props => props.examine ? '1rem' : '0.9rem'};
   }
 `;
 
@@ -160,6 +189,10 @@ const PopupDialogContainer = styled(DialogContainer)`
   max-width: 450px;
   border: 3px solid #ff0000;
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+  
+  @media (max-width: 480px) {
+    max-width: 95%;
+  }
 `;
 
 const PopupHeader = styled(DialogHeader)`

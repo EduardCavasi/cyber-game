@@ -53,6 +53,14 @@ const SceneContainer = styled.div`
     z-index: 1;
     pointer-events: none;
   }
+  
+  @media (max-width: 768px) {
+    height: 60vh;
+  }
+  
+  @media (max-width: 480px) {
+    height: 50vh;
+  }
 `;
 
 const ClickableArea = styled.div<{

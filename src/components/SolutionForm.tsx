@@ -11,6 +11,14 @@ const SolutionFormContainer = styled.div`
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.3s ease-in-out;
   
+  @media (max-width: 768px) {
+    padding: 1.2rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 1rem;
+  }
+  
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
@@ -23,6 +31,11 @@ const FormTitle = styled.h2`
   margin-bottom: 1rem;
   text-align: center;
   font-size: 1.2rem;
+  
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
 `;
 
 const FormDescription = styled.p`
@@ -30,10 +43,19 @@ const FormDescription = styled.p`
   margin-bottom: 1.5rem;
   text-align: center;
   font-size: 0.9rem;
+  
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
 `;
 
 const FormGroup = styled.div`
   margin-bottom: 1rem;
+  
+  @media (max-width: 480px) {
+    margin-bottom: 0.8rem;
+  }
 `;
 
 const Label = styled.label`
@@ -41,6 +63,11 @@ const Label = styled.label`
   color: #ecf0f1;
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+  
+  @media (max-width: 480px) {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
 `;
 
 const Input = styled.input`
@@ -55,6 +82,11 @@ const Input = styled.input`
   &:focus {
     outline: none;
     border-color: #3498db;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.6rem;
+    font-size: 0.85rem;
   }
 `;
 
@@ -72,6 +104,11 @@ const SubmitButton = styled.button`
   
   &:hover {
     background-color: #2980b9;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
   }
 `;
 
