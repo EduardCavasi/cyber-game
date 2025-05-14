@@ -1,0 +1,32 @@
+.app {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.highlight-secondary {
+  color: var(--secondary-color);
+}
+
+.highlight-accent {
+  color: var(--accent-color);
+}
+
+.glow {
+  animation: glow 2s infinite;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Remove the default styles we don't need */
